@@ -1,0 +1,95 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  	<filter>
+		<filter-name>cat-filter</filter-name>
+		<filter-class>com.dianping.cat.servlet.CatFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>cat-filter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+  
+  	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:applicationContext-vst-back-web-beans.xml
+		</param-value>
+	</context-param>
+	
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter>
+		<filter-name>ThreadFiler</filter-name>
+		<filter-class>com.lvmama.filter.ThreadFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>permissionFilter</filter-name>
+		<filter-class>com.lvmama.vst.comm.filter.PermissionFilter</filter-class>
+		<init-param>
+			<param-name>excludeUrl</param-name>
+			<param-value>
+				/checkversion.jsp,
+				/checkgrayvalue,
+				/fax**.do,
+				/api/push/**,
+				/pet/ajax/file/upload.do,
+				/prod/position/start.do,
+				/ws/**,
+				/prod/groupdateaddtional/**,
+				/nebula_project/pre_control/**
+			</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>ThreadFiler</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	 <filter-mapping>
+		<filter-name>permissionFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>vst_admin</servlet-name>
+		<servlet-class>com.lvmama.vst.back.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:springMvc-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vst_admin</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+</web-app>

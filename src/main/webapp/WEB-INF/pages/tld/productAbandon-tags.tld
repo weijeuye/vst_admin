@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE taglib PUBLIC
+    "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+    "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+
+	<tlib-version>1.0.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>productAbandon</short-name>
+	<uri>/productAbandon-tags</uri>
+	<display-name>"ProductAbandon Tags"</display-name>
+	<tag>
+		<name>checkPerm</name>
+		<tag-class>
+			com.lvmama.vst.back.util.tag.ProductAbandonTag
+		</tag-class>
+		<body-content>ftl</body-content>
+		<attribute>
+			<name>managerIdPerm</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+            <name>categoryId</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>bu</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>suppGoodsBu</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+	</tag>	
+</taglib>

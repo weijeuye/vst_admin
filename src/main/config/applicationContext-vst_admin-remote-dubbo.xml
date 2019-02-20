@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://code.alibabatech.com/schema/dubbo
+						http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+       default-autowire="byName">
+
+	<dubbo:reference id="goodsManagerServiceRemote" interface="com.lvmama.vst.back.prodmanager.service.GoodsManagerService" />
+	<dubbo:reference id="productManagerServiceRemote" interface="com.lvmama.vst.back.prodmanager.service.ProductManagerService" />
+	<dubbo:reference id="prodProductClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdProductClientService" />
+	<dubbo:reference id="prodProductPropClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdProductPropClientService" />
+	<dubbo:reference id="suppGoodsClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsClientService" />
+	<dubbo:reference id="permUserServiceAdapterRemote" interface="com.lvmama.vst.pet.adapter.PermUserServiceAdapter" />
+	<dubbo:reference id="districtClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.DistrictClientService" />
+	<dubbo:reference id="petProdGoodsAdapterRemote" interface="com.lvmama.vst.pet.goods.PetProdGoodsAdapter" />
+	<dubbo:reference id="prodProductBranchClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdProductBranchClientService"/>
+	<dubbo:reference id="branchPropClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.BranchPropClientService"/>
+	<dubbo:reference id="dictClientService" interface="com.lvmama.vst.back.client.biz.service.DictClientService"/>
+	<dubbo:reference id="prodProductBranchPropClientService" interface="com.lvmama.vst.back.client.prod.service.ProdProductBranchPropClientService"/>
+	<dubbo:reference id="branchClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.BranchClientService"/>
+	<dubbo:reference id="comPushClientService" interface="com.lvmama.vst.back.client.pub.service.ComPushClientService"/>
+	<dubbo:reference id="routeWeiXinContactsClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.RouteWeiXinContactsClientService" />
+	<dubbo:reference id="bizCategoryQueryServiceRemote" interface="com.lvmama.vst.back.biz.service.BizCategoryQueryService" />
+	<dubbo:reference id="bizBrandServiceRemote" interface="com.lvmama.vst.back.biz.service.BizBrandService" />
+	<dubbo:reference id="destinationannouncement2ClientServiceRemote" interface="com.lvmama.vst.back.client.destinationannouncement.service.Destinationannouncement2ClientService" />
+	<dubbo:reference id="suppSupplierServiceRemote" interface="com.lvmama.vst.back.client.supp.service.SuppSupplierClientService" />
+	
+	
+	<dubbo:reference id="prodProductHotelAdapterServiceRemote" interface="com.lvmama.vst.back.router.adapter.ProdProductHotelAdapterService" />
+	<dubbo:reference id="playMethodClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.PlayMethodClientService" />
+	<dubbo:reference id="pushAdapterServiceRemoteRemote" interface="com.lvmama.vst.back.pub.service.PushAdapterServiceRemote" />
+	<dubbo:reference id="bizKeywordServiceRemote" interface="com.lvmama.vst.back.biz.service.BizKeywordService" />
+	<dubbo:reference id="seasonEffectServiceRemote" interface="com.lvmama.vst.back.biz.service.SeasonEffectService" />
+	<dubbo:reference id="bizDestShopServiceRemote" interface="com.lvmama.vst.back.biz.service.BizDestShopService" />
+	<dubbo:reference id="destClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.DestClientService" />
+	<dubbo:reference id="attributionClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.AttributionClientService" />
+	<dubbo:reference id="dictDefClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.DictDefClientService" />
+	<dubbo:reference id="dictPropClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.DictPropClientService" />
+	<dubbo:reference id="dictPropDefServiceRemote" interface="com.lvmama.vst.back.biz.service.DictPropDefService" />
+	<dubbo:reference id="categoryClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.CategoryClientService" />
+	<dubbo:reference id="categoryPropClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.CategoryPropClientService" />
+	<dubbo:reference id="categoryPropGroupServiceRemote" interface="com.lvmama.vst.back.biz.service.CategoryPropGroupService" />
+	<dubbo:reference id="bizPropPoolServiceRemote" interface="com.lvmama.vst.back.biz.service.BizPropPoolService" />
+	<dubbo:reference id="scenicComplexQueryServiceRemote" interface="com.lvmama.vst.order.service.ScenicComplexQueryService" />
+	<dubbo:reference id="suggestionClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.SuggestionClientService" />
+	<dubbo:reference id="suggestionGroupServiceRemote" interface="com.lvmama.vst.back.biz.service.SuggestionGroupService" />
+	<dubbo:reference id="suggestionDetailServiceRemote" interface="com.lvmama.vst.back.biz.service.SuggestionDetailService" />
+	
+	<dubbo:reference id="bizInsurCatRuleServiceRemote" interface="com.lvmama.vst.back.biz.service.BizInsurCatRuleService" />
+	<dubbo:reference id="bizOrderRequiredExpandServiceRemote" interface="com.lvmama.vst.back.biz.service.BizOrderRequiredExpandService" />
+	<dubbo:reference id="bizOrderRequiredClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.BizOrderRequiredClientService" />
+	<dubbo:reference id="comLogClientServiceRemote" interface="com.lvmama.vst.back.client.pub.service.ComLogClientService" />
+	<dubbo:reference id="prodDestReClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdDestReClientService" />
+	<dubbo:reference id="suppGoodsSaleReClientService" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsSaleReClientService"/>
+	<dubbo:reference id="destContentClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.DestContentClientService"/>
+
+
+	<dubbo:reference id="hotelProductQrVstApiServiceRemote" interface="com.lvmama.dest.api.vst.prod.service.IHotelProductQrVstApiService"/>
+	<dubbo:reference id="bizFlightServiceRemote" interface="com.lvmama.vst.back.biz.service.BizFlightService"/>
+	<dubbo:reference id="districtSignClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.DistrictSignClientService"/>
+	<dubbo:reference id="insuranceSupplierRelationClientServiceRemote" interface="com.lvmama.vst.insurant.client.service.InsuranceSupplierRelationClientService"/>
+	<dubbo:reference id="trafficLineServiceRemote" interface="com.lvmama.vst.back.biz.service.TrafficLineService"/>
+	<dubbo:reference id="bizTrainServiceRemote" interface="com.lvmama.vst.back.biz.service.BizTrainService"/>
+	<dubbo:reference id="prodPackageDetailClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdPackageDetailClientService"/>
+	<dubbo:reference id="bizProdAdServiceRemote" interface="com.lvmama.vst.back.front.service.BizProdAdService"/>
+	<dubbo:reference id="bizProdRankAdServiceRemote" interface="com.lvmama.vst.back.front.service.BizProdRankAdService"/>
+	<dubbo:reference id="lvmmLogClientServiceRemote" interface="com.lvmama.vst.comlog.LvmmLogClientService"/>
+	<dubbo:reference id="destAroundServiceRemote" interface="com.lvmama.vst.back.front.service.DestAroundService"/>
+	<dubbo:reference id="districtAroundServiceRemote" interface="com.lvmama.vst.back.front.service.DistrictAroundService"/>
+	<dubbo:reference id="prodTrafficClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdTrafficClientService"/>
+	<dubbo:reference id="prodLineRouteClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdLineRouteClientService"/>
+	<dubbo:reference id="bizTrainStopServiceRemote" interface="com.lvmama.vst.back.biz.service.BizTrainStopService"/>
+	<dubbo:reference id="dictServiceRemote" interface="com.lvmama.vst.back.biz.service.DictService"/>
+	<dubbo:reference id="comPhotoClientServiceRemote" interface="com.lvmama.vst.back.client.pub.service.ComPhotoClientService"/>
+	<dubbo:reference id="prodPackageHotelCombDistributionClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdPackageHotelCombDistributionClientService"/>
+	<dubbo:reference id="prodPackageGroupClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdPackageGroupClientService"/>
+	<dubbo:reference id="suppQualServiceRemote" interface="com.lvmama.vst.back.supp.service.SuppQualService"/>
+	<dubbo:reference id="suppPrewarningServiceRemote" interface="com.lvmama.vst.back.supp.service.SuppPrewarningService"/>
+	<dubbo:reference id="suppContactServiceRemote" interface="com.lvmama.vst.back.supp.service.SuppContactService"/>
+	<dubbo:reference id="supplierSettlementServiceAdapterRemote" interface="com.lvmama.vst.pet.adapter.SupplierSettlementServiceAdapter"/>
+	<dubbo:reference id="suppFaxClientServiceRemote" interface="com.lvmama.vst.back.client.supp.service.SuppFaxClientService"/>
+	<dubbo:reference id="prodEcontractClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdEcontractClientService"/>
+	<dubbo:reference id="subCompanyClientServiceRemote" interface="com.lvmama.vst.back.client.o2o.service.SubCompanyClientService"/>
+	<dubbo:reference id="suppSupplierAuditServiceRemote" interface="com.lvmama.vst.back.supp.audit.service.SuppSupplierAuditService"/>
+	<dubbo:reference id="branchPropServiceRemote" interface="com.lvmama.vst.back.biz.service.BranchPropService"/>
+	<dubbo:reference id="bizBranchQueryServiceRemote" interface="com.lvmama.vst.back.biz.service.BizBranchQueryService"/>
+	<dubbo:reference id="bizReserveLimitService" interface="com.lvmama.vst.back.biz.service.BizReserveLimitService" />
+	<dubbo:reference id="destReserveLimitService" interface="com.lvmama.vst.back.biz.service.DestReserveLimitService" />
+	
+	<!-- new xml peizhi -->
+	<dubbo:reference id="prodAdditionFlagClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdAdditionFlagClientService"/>
+	<dubbo:reference id="distributorCachedServiceRemote" interface="com.lvmama.vst.back.dist.service.DistributorCachedService"/>
+	<dubbo:reference id="distributorClientServiceRemote" interface="com.lvmama.vst.back.client.dist.service.DistributorClientService"/>
+	<dubbo:reference id="distributorGoodsServiceRemote" interface="com.lvmama.vst.back.dist.service.DistributorGoodsService"/>
+	<dubbo:reference id="prodProductBranchServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdProductBranchService"/>
+	<dubbo:reference id="bizSeoFriendLinkClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.BizSeoFriendLinkClientService"/>
+	<dubbo:reference id="bizBuEnumClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.BizBuEnumClientService"/>
+	<dubbo:reference id="travelRecommendClientServiceRemote" interface="com.lvmama.vst.superfreetour.service.TravelRecommendClientService"/>
+	<dubbo:reference id="travelRecommendTagServiceRemote" interface="com.lvmama.vst.back.superfreetour.service.TravelRecommendTagService"/>
+	<dubbo:reference id="travelRecommendRouteServiceRemote" interface="com.lvmama.vst.back.superfreetour.service.TravelRecommendRouteService"/>
+	<dubbo:reference id="travelRecommendGuideServiceRemote" interface="com.lvmama.vst.back.superfreetour.service.TravelRecommendGuideService"/>
+	<dubbo:reference id="travelRecommendTrafficRuleServiceRemote" interface="com.lvmama.vst.back.superfreetour.service.TravelRecommendTrafficRuleService"/>	
+	<dubbo:reference id="prodProductServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdProductService"/>
+	<dubbo:reference id="prodProductBranchAdapterServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdProductBranchAdapterService"/>
+	<dubbo:reference id="travelHotelRuleServiceRemote" interface="com.lvmama.vst.back.superfreetour.service.TravelHotelRuleService"/>
+	<dubbo:reference id="bizDictQueryServiceRemote" interface="com.lvmama.vst.back.biz.service.BizDictQueryService"/>
+	<dubbo:reference id="travelRecommendServiceRemote" interface="com.lvmama.vst.back.superfreetour.service.TravelRecommendService"/>
+	<dubbo:reference id="superFreetourErrorManageClientService" interface="com.lvmama.vst.superfreetour.service.SuperFreetourErrorManageClientService"/>
+	<dubbo:reference id="superFreetourHotPlaceClientService" interface="com.lvmama.vst.superfreetour.service.SuperFreetourHotPlaceClientService"/>
+
+	<dubbo:reference id="prodProductQueryServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdProductQueryService"/>
+	<dubbo:reference id="subjectClientService" interface="com.lvmama.vst.back.client.biz.service.SubjectClientService"/>
+	<dubbo:reference id="prodSubjectClientService" interface="com.lvmama.vst.back.client.prod.service.ProdSubjectClientService"/>
+	<dubbo:reference id="tagClientService" interface="com.lvmama.vst.back.client.biz.service.TagClientService"/>
+	
+	<!-- 多语言服务 -->
+    <dubbo:reference id="MsgMultiLangClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.IMsgMultiLangClientService"/>
+    
+	<dubbo:reference id="prodTagClientService" interface="com.lvmama.vst.back.client.biz.service.ProdTagClientService"/>
+	<dubbo:reference id="tagGroupClientService" interface="com.lvmama.vst.back.client.biz.service.TagGroupClientService"/>
+	<dubbo:reference id="visaProdProductBranchService" interface="com.lvmama.visa.api.service.VisaProdProductBranchService"/>
+	<dubbo:reference id="channelAreaClientService" interface="com.lvmama.vst.back.client.channel.service.ChannelAreaClientService"/>
+	<dubbo:reference id="channelAreaFromClientService" interface="com.lvmama.vst.back.client.channel.service.ChannelAreaFromClientService"/>
+	<dubbo:reference id="channelFromPlaceClientService" interface="com.lvmama.vst.back.client.channel.service.ChannelFromPlaceClientService"/>
+	<dubbo:reference id="shareholderInfoClientService" interface="com.lvmama.vst.back.client.o2o.service.ShareholderInfoClientService"/>
+	<dubbo:reference id="sholdAssCompanyClientService" interface="com.lvmama.vst.back.client.o2o.service.SholdAssCompanyClientService"/>
+	<dubbo:reference id="prodPromotionDescService" interface="com.lvmama.vst.back.prod.service.ProdPromotionDescService"/>
+	<dubbo:reference id="suppContractClientService" interface="com.lvmama.vst.back.client.supp.service.SuppContractClientService"/>
+	<dubbo:reference id="suppContractCheckService" interface="com.lvmama.vst.back.supp.service.SuppContractCheckService"/>
+	<dubbo:reference interface="com.lvmama.vst.back.supp.service.SuppContractChangeService" id="suppContractChangeServiceRemote"/>
+	
+	<dubbo:reference id="lineProductAirCorpPriorityServiceRemote" interface="com.lvmama.vst.prod.query.huaXiaAir.LineProductAirCorpPriorityService" />
+	<dubbo:reference id="productDescriptionServiceRemote" interface="com.lvmama.vst.prod.query.huaXiaAir.ProdProductDescriptionService" />
+	<dubbo:reference interface="com.lvmama.vst.back.supp.service.SuppContactRelateService" id="suppContactRelateServiceRemote"/>
+	<dubbo:reference interface="com.lvmama.vst.back.supp.audit.service.SuppContactAuditService" id="suppContactAuditServiceRemote"/>
+	<dubbo:reference interface="com.lvmama.vst.back.supp.audit.service.SuppContactRelateAuditService" id="suppContactRelateAuditServiceRemote"/>
+	<dubbo:reference interface="com.lvmama.vst.back.supp.audit.service.SuppFaxRuleAuditService" id="suppFaxRuleAuditServiceRemote"/>
+	<dubbo:reference interface="com.lvmama.vst.back.supp.audit.service.SuppPrewarningAuditService" id="suppPrewarningAuditServiceRemote"/>
+	<dubbo:reference interface="com.lvmama.vst.back.supp.audit.service.SuppQualAuditService" id="suppQualAuditServiceRemote"/>
+	<dubbo:reference interface="com.lvmama.vst.back.supp.service.SupplierSettlementService" id="supplierSettlementServiceRemote"/>
+	<dubbo:reference interface="com.lvmama.vst.back.client.supp.service.SuppSettleRuleClientService" id="suppSettleRuleClientServiceRemote"/>
+	
+	<dubbo:reference id="suppGoodsGrossMarginLogsServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsGrossMarginLogsService"/>
+	<dubbo:reference id="suppGoodsGrossMarginServiceRemote" 	interface="com.lvmama.vst.back.goods.service.SuppGoodsGrossMarginService"/>
+	<dubbo:reference id="grossMarginDistrictServiceRemote" 		interface="com.lvmama.vst.back.goods.service.GrossMarginDistrictService"/>
+	<dubbo:reference id="grossMarginReceiverServiceRemote" 		interface="com.lvmama.vst.back.goods.service.GrossMarginReceiverService"/>
+
+
+	<dubbo:reference id="resPrecontrolPolicyServiceRemote" 		interface="com.lvmama.vst.back.control.service.ResPrecontrolPolicyService"/>
+	<dubbo:reference id="resPrecontrolInventoryServiceRemote" 	interface="com.lvmama.vst.back.control.service.ResPrecontrolInventoryService"/>
+	<dubbo:reference id="resPrecontrolAmountServiceRemote" 		interface="com.lvmama.vst.back.control.service.ResPrecontrolAmountService"/>
+	<dubbo:reference id="resPrecontrolWarmReceiverServiceRemote" 	interface="com.lvmama.vst.back.control.service.ResPrecontrolWarmReceiverService"/>
+	<dubbo:reference id="resPrecontrolWarmOptionServiceRemote" 	interface="com.lvmama.vst.back.control.service.ResPrecontrolWarmOptionService"/>
+	<dubbo:reference id="resRuleReceiverRelationSeriveRemote" 	interface="com.lvmama.vst.back.control.service.ResRuleReceiverRelationSerive"/>
+	<dubbo:reference id="resWarmRuleServiceRemote" 				interface="com.lvmama.vst.back.control.service.ResWarmRuleService"/>
+	<dubbo:reference id="resPrecontrolGoodsHotelAdapterServiceRemote" 	interface="com.lvmama.vst.back.router.adapter.ResPrecontrolGoodsHotelAdapterService"/>
+	<dubbo:reference id="resPrecontrolJobServiceRemote" 		interface="com.lvmama.vst.back.control.service.ResPrecontrolJobService"/>
+	<dubbo:reference id="resPrecontrolPolicyItemServiceRemote" 	interface="com.lvmama.vst.back.control.service.ResPrecontrolPolicyItemService"/>
+	<dubbo:reference id="resPrecontrolPaymentServiceRemote" 	interface="com.lvmama.vst.back.control.service.ResPrecontrolPaymentService"/>
+	<dubbo:reference id="orderServiceRemote" interface="com.lvmama.vst.back.client.ord.service.OrderService" />
+	<dubbo:reference id="resPrecontrolBindGoodsClientServiceRemote" interface="com.lvmama.vst.back.client.precontrol.service.ResPrecontrolBindGoodsClientService"/>
+	
+	<dubbo:reference id="suppGoodsHotelAdapterClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsHotelAdapterClientService"/>
+	<dubbo:reference id="hotelProductQrVstApiServiceAgentRemote" interface="com.lvmama.vst.back.prod.agent.IHotelProductQrVstApiServiceAgent" />
+	<dubbo:reference id="hotelGoodsQueryVstApiServiceRemote" interface="com.lvmama.dest.api.vst.goods.service.IHotelGoodsQueryVstApiService"/>
+	<dubbo:reference id="suppSettlementEntityClientServiceRemote" interface="com.lvmama.vst.back.client.supp.service.SuppSettlementEntityClientService" />
+	<dubbo:reference id="prodProductClientServiceHotelAdapterRemote" interface="com.lvmama.vst.back.hotel.adapter.client.ProdProductClientServiceHotelAdapter"/>
+	<dubbo:reference id="suppGoodsClientServiceHotelAdapterRemote" interface="com.lvmama.vst.back.hotel.adapter.client.SuppGoodsClientServiceHotelAdapter"/>
+	<dubbo:reference id="prodProductBranchAdapterClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdProductBranchAdapterClientService"/>
+	<dubbo:reference id="vstEmailServiceAdapterRemote" interface="com.lvmama.vst.pet.adapter.VstEmailServiceAdapter"/>
+	
+	<dubbo:reference id="prodProductAssociationServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdProductAssociationService" />
+	<dubbo:reference id="sensitiveWordServiceAdapter" interface="com.lvmama.vst.pet.adapter.SensitiveWordServiceAdapter" />
+	<dubbo:reference id="tntProductGoodsPreviewAdapter" interface="com.lvmama.vst.pet.adapter.TntProductGoodsPreviewAdapter" />
+	<dubbo:reference id="prodLineRouteDetailClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdLineRouteDetailClientService" />
+	<dubbo:reference id="prodProductAdapterClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdProductAdapterClientService" />
+	<dubbo:reference id="comFSService" interface="com.lvmama.vst.pet.adapter.IComFSServiceAdapter" />
+	<dubbo:reference id="materialsClientServiceRemote" interface="com.lvmama.vst.back.client.o2o.service.MaterialsClientService"/>
+	<dubbo:reference id="principalClientServiceRemote" interface="com.lvmama.vst.back.client.o2o.service.PrincipalClientService"/>
+	<dubbo:reference id="sholdAssCompanyRelationClientServiceRemote" interface="com.lvmama.vst.back.client.o2o.service.SholdAssCompanyRelationClientService"/>
+	<dubbo:reference id="subCompanySholdRelationClientServiceRemote" interface="com.lvmama.vst.back.client.o2o.service.SubCompanySholdRelationClientService"/>
+	<dubbo:reference id="pointOfSalesClientServiceRemote" interface="com.lvmama.vst.back.client.o2o.service.PointOfSalesClientService" />
+	<dubbo:reference id="operateLogClientServiceRemote" interface="com.lvmama.vst.back.client.o2o.service.OperateLogClientService" />
+	<dubbo:reference id="contractRecordClientServiceRemote" interface="com.lvmama.vst.back.client.o2o.service.ContractRecordClientService" />
+	<dubbo:reference id="contractRecordScanClientServiceRemote" interface="com.lvmama.vst.back.client.o2o.service.ContractRecordScanClientService" />
+	<dubbo:reference id="subCompanySupplierRelationClientServiceRemote" interface="com.lvmama.vst.back.client.o2o.service.SubCompanySupplierRelationClientService" />
+	<dubbo:reference id="suppSupplierToAuditServiceRemote" interface="com.lvmama.vst.back.supp.service.SuppSupplierToAuditService"/>
+	<dubbo:reference id="suppMailClientServiceRemote" interface="com.lvmama.vst.back.client.supp.service.SuppMailClientService"/>
+	
+	<dubbo:reference id="suppSettlementEntitiesServiceRemote" interface="com.lvmama.vst.back.supp.service.SuppSettlementEntitiesService"/>
+	<dubbo:reference id="ebkUserClientServiceRemote" interface="com.lvmama.vst.ebooking.client.ebk.serivce.EbkUserClientService"/>
+	
+	<dubbo:reference id="resPrecontrolBindGoodsServiceRemote" interface="com.lvmama.vst.back.control.service.ResPrecontrolBindGoodsService"/>
+	<dubbo:reference id="resPreControlTimePriceServiceRemote" interface="com.lvmama.vst.back.control.service.ResPreControlTimePriceService"/>
+	<dubbo:reference id="resPrecontrolGoodsServiceRemote" interface="com.lvmama.vst.back.control.service.ResPrecontrolGoodsService"/>
+	<dubbo:reference id="resPreControlServiceRemote" interface="com.lvmama.vst.back.client.precontrol.service.ResPreControlService"/>
+	<dubbo:reference id="budgetServiceRemote" interface="com.lvmama.finance.comm.vst.service.BudgetService" />
+	<dubbo:reference id="ordOrderRouteServiceRemote" interface="com.lvmama.vst.back.client.ord.service.OrdOrderRouteClientService"/>
+	<dubbo:reference id="productVideoServiceRemote" interface="com.lvmama.vst.back.prod.service.ProductVideoService"/>
+	<dubbo:reference id="uploadPicServiceRemote" interface="com.lvmama.vst.pet.adapter.UploadPicServiceAdapter" />
+	<dubbo:reference id="prodGroupServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdGroupService"/>
+	<dubbo:reference id="prodProductServiceAdapterRemote" interface="com.lvmama.vst.back.prod.service.ProdProductServiceAdapter"/>
+	<dubbo:reference id="comOrderRequiredClientServiceRemote" interface="com.lvmama.vst.back.client.pub.service.ComOrderRequiredClientService"/>
+	<dubbo:reference id="distDistributorProdClientServiceRemote" interface="com.lvmama.vst.back.client.dist.service.DistDistributorProdClientService"/>
+	<dubbo:reference id="visaDocServiceRemote" interface="com.lvmama.vst.back.visa.service.VisaDocService"/>
+	<dubbo:reference id="prodVisadocReServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdVisadocReService"/>
+	<dubbo:reference id="tntGoodsChannelCouponAdapterRemote" interface="com.lvmama.vst.pet.adapter.TntGoodsChannelCouponAdapter"/>
+	<dubbo:reference id="prodTrafficGroupServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdTrafficGroupService"/>
+	<dubbo:reference id="associationRecommendServiceRemote" interface="com.lvmama.vst.back.prod.service.AssociationRecommendService"/>
+	<dubbo:reference id="prodLineGroupPackServiceRemote" interface="com.lvmama.vst.back.pack.service.ProdLineGroupPackService"/>
+	<dubbo:reference id="prodGroupClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdGroupClientService"/>
+	<dubbo:reference id="prodProductDescriptionClientServiceRemote" interface="com.lvmama.vst.back.dujia.client.comm.prod.service.ProdProductDescriptionClientService"/>
+	<dubbo:reference id="comCalDataClientServiceRemote" interface="com.lvmama.vst.back.client.pub.service.ComCalDataClientService"/>
+	<dubbo:reference id="prodRouteFeatureClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdRouteFeatureClientService"/>
+	<dubbo:reference id="prodPackageDetailAddPriceClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdPackageDetailAddPriceClientService"/>
+	<dubbo:reference id="prodPackageDetailGoodsServiceRemote" interface="com.lvmama.vst.back.pack.service.ProdPackageDetailGoodsService"/>
+	<dubbo:reference id="comMessageServiceRemote" interface="com.lvmama.comm.pet.service.pub.ComMessageService"/>
+	<dubbo:reference id="prodStartDistrictDetailServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdStartDistrictDetailService"/>
+	<dubbo:reference id="pushAdapterServiceRemote" interface="com.lvmama.vst.back.pub.service.PushAdapterService"/>
+	
+	<dubbo:reference id="destServiceRemote" interface="com.lvmama.vst.back.biz.service.DestService"/>
+	
+	<dubbo:reference id="prodLineBasicInfoClientServiceRemote" interface="com.lvmama.vst.back.dujia.client.comm.prod.service.ProdLineBasicInfoClientService"/>
+	<dubbo:reference id="bizDestTravelAlertClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.BizDestTravelAlertClientService"/>
+	<dubbo:reference id="suppGoodsAdapterServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsAdapterService"/>
+	
+	<dubbo:reference id="prodHotelGroupPackGoodsServiceRemote" interface="com.lvmama.vst.back.pack.service.ProdHotelGroupPackGoodsService"/>
+	
+	<dubbo:reference id="prodHotelGroupPackGoodslAdapterServiceRemote" interface="com.lvmama.vst.back.pack.service.ProdHotelGroupPackGoodslAdapterService"/>
+	
+	<dubbo:reference id="suppGoodsSaleReDetailServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsSaleReDetailService"/>
+	
+	<dubbo:reference id="visaProdProductServiceRemote" interface="com.lvmama.visa.api.service.VisaProdProductService"/>
+	
+	<dubbo:reference id="visaBranchServiceRemote" interface="com.lvmama.visa.api.service.VisaBranchService"/>
+	
+	<dubbo:reference id="prodProductHotelAdapterClientServiceRemote" interface="com.lvmama.vst.back.prod.adapter.ProdProductHotelAdapterClientService"/>
+	
+	<dubbo:reference id="prodVisaDocDateClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdVisaDocDateClientService"/>
+	
+	<dubbo:reference id="lineRouteDateServiceRemote" interface="com.lvmama.vst.back.prod.service.LineRouteDateService">
+		<dubbo:method name="saveOrUpdatePresalePrice" async="true" return="false" />
+	</dubbo:reference>
+	
+	<dubbo:reference id="prodLineRouteDetailHelperServiceRemote" interface="com.lvmama.vst.back.dujia.comm.route.detail.service.ProdLineRouteDetailHelperService"/>
+	
+	<dubbo:reference id="prodProductNoticeServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdProductNoticeService"/>
+	<dubbo:reference id="ebkSupplierGroupClientServiceRemote" interface="com.lvmama.vst.ebooking.client.ebk.serivce.EbkSupplierGroupClientService"/>
+
+	<dubbo:reference id="prodRouteDetailGroupServiceRemote" interface="com.lvmama.vst.back.dujia.comm.route.detail.service.ProdRouteDetailGroupService"/>
+
+	<dubbo:reference id="prodRouteDetailHotelServiceRemote" interface="	com.lvmama.vst.back.dujia.comm.route.detail.service.ProdRouteDetailHotelService"/>
+	
+	<dubbo:reference id="prodRouteDetailMealServiceRemote" interface="com.lvmama.vst.back.dujia.comm.route.detail.service.ProdRouteDetailMealService"/>
+	
+	<dubbo:reference id="prodRouteDetailScenicServiceRemote" interface="com.lvmama.vst.back.dujia.comm.route.detail.service.ProdRouteDetailScenicService"/>
+	
+	<dubbo:reference id="prodRouteDetailShoppingServiceRemote" interface="com.lvmama.vst.back.dujia.comm.route.detail.service.ProdRouteDetailShoppingService"/>
+	
+	<dubbo:reference id="prodLineRouteDescriptionClientServiceRemote" interface="com.lvmama.vst.back.dujia.client.comm.route.service.ProdLineRouteDescriptionClientService"/>
+	
+	<dubbo:reference id="prodContractDetailClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdContractDetailClientService"/>
+	
+	<dubbo:reference id="prodRouteDetailRecommendServiceRemote" interface="com.lvmama.vst.back.dujia.comm.route.detail.service.ProdRouteDetailRecommendService"/>
+
+	<!-- 签证材料 -->
+    <dubbo:reference id="visaDocService" interface="com.lvmama.visa.api.service.VisaDocService" />
+    
+    <dubbo:reference id="lineRouteClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.LineRouteClientService" />
+    
+    
+    <!-- new5 -->
+    <dubbo:reference id="prodPackageGroupLineServiceRemote" interface="com.lvmama.vst.back.pack.service.ProdPackageGroupLineService" />
+    
+    <dubbo:reference id="prodPackageGroupTransportServiceRemote" interface="com.lvmama.vst.back.pack.service.ProdPackageGroupTransportService" />
+    
+    <dubbo:reference id="citygroupServiceRemote" interface="com.lvmama.vst.back.biz.service.CitygroupService" />
+    
+    <dubbo:reference id="prodPackageDetailGoodsAdapterServiceRemote" interface="com.lvmama.vst.back.pack.service.ProdPackageDetailGoodsAdapterService" />
+    
+    <dubbo:reference id="districtQueryMemServiceRemote" interface="com.lvmama.vst.back.biz.service.DistrictQueryMemService" />
+    
+    <dubbo:reference id="prodEsQueueServiceRemote" interface="com.lvmama.vst.back.prod.comm.query.service.ProdEsQueueService" />
+    
+    <dubbo:reference id="petMessageServiceAdapterRemote" interface="com.lvmama.vst.pet.adapter.PetMessageServiceAdapter" />
+    
+    
+	<dubbo:reference id="suppGoodsGroupAdapterRemote" interface="com.lvmama.vst.back.goods.adapter.SuppGoodsGroupAdapter"/>
+	<dubbo:reference id="suppGoodsGroupClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsGroupClientService"/>
+	<dubbo:reference id="suppGoodsGroupStockClientServiceRemote"  interface="com.lvmama.vst.back.client.goods.service.SuppGoodsGroupStockClientService"/>
+	<dubbo:reference id="suppGoodsRefundServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsRefundService"/>
+	<dubbo:reference id="prodRefundServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdRefundService"/>
+	<dubbo:reference id="suppGoodsTimePriceServiceRemote" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsTimePriceClientService"/>
+	<dubbo:reference id="prodGroupDateServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdGroupDateClientService"/>
+	<dubbo:reference id="prodCalClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdCalClientService"/>
+	<dubbo:reference id="suppFaxServiceRemote" interface="com.lvmama.vst.back.supp.service.SuppFaxService" />
+
+	<dubbo:reference id="prodSupplierServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdSupplierService"/>
+
+	<dubbo:reference id="ebkSupplierGroupClientRemote"  interface="com.lvmama.vst.ebooking.client.ebk.serivce.EbkSupplierGroupClientService" />
+    <dubbo:reference id="prodProductSaleReClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdProductSaleReClientService" />
+
+    <dubbo:reference id="suppGoodsTimePriceAdapterClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsTimePriceAdapterClientService"/>
+    <dubbo:reference id="suppGoodsLineTimePriceClientServiceRemote" interface="com.lvmama.vst.supp.client.service.SuppGoodsLineTimePriceClientService"/>
+    <dubbo:reference id="suppGoodsFApiTimePriceServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsFApiTimePriceService"/>
+    <dubbo:reference id="suppGoodsPresaleStampTimePriceServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsPresaleStampTimePriceService"/>
+
+    <dubbo:reference id="suppGoodsRelationClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsRelationClientService"/>
+    
+    <dubbo:reference id="prodPackageHotelCombDetailAdapterServiceRemote" interface="com.lvmama.vst.back.router.adapter.ProdPackageHotelCombDetailAdapterService" />
+    
+    <dubbo:reference id="prodPackageHotelCombHotelServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdPackageHotelCombHotelService" />
+    
+    <dubbo:reference id="prodPackageHotelCombTicketServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdPackageHotelCombTicketService" />
+    
+    <dubbo:reference id="prodPackageHotelCombDetailServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdPackageHotelCombDetailService" />
+    
+    <dubbo:reference id="suppGoodsDescClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsDescClientService" />
+    
+    <dubbo:reference id="prodSmsChannelClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.ProdSmsChannelClientService" />
+    
+    <dubbo:reference id="suppGoodsCircusClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsCircusClientService" />
+    
+    <dubbo:reference id="suppGoodsEditPermRemoteService" interface="com.lvmama.vst.back.goods.service.SuppGoodsEditPermRemoteService" />
+    
+    <dubbo:reference id="suppGoodsOrderClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsOrderClientService" />
+    
+    <dubbo:reference id="passProductGoodsDubboService" interface="com.lvmama.vst.back.client.passport.service.PassProductGoodsDubboService" />
+    
+    <dubbo:reference id="suppGoodsAdditionClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsAdditionClientService" />
+    
+    <dubbo:reference id="suppGoodsSkuRelationClientServiceRemote" interface="com.lvmama.vst.back.client.ticket.service.SuppGoodsSkuRelationClientService" />
+    
+    <dubbo:reference id="passportServiceRemote" interface="com.lvmama.vst.back.client.passport.service.PassportService" />
+    
+    <dubbo:reference id="suppGoodsAddTimePriceServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsAddTimePriceService" />
+    <dubbo:reference id="suppGoodsDescJsonServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsDescJsonService" />
+    <dubbo:reference id="suppGoodsExpServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsExpService" />
+    <dubbo:reference id="suppGoodsNotimeTimePriceServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsNotimeTimePriceService" />
+    <dubbo:reference id="suppGoodsQueryServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsQueryService" />
+    <dubbo:reference id="suppGoodsRescheduleServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGoodsRescheduleService" />
+    <dubbo:reference id="prodBranchDictionaryServiceRemote" interface="com.lvmama.vst.back.prod.service.ProdBranchDictionaryService" />
+    <dubbo:reference id="suppGoodsDescAdapterServiceRemote" interface="com.lvmama.vst.back.router.adapter.SuppGoodsDescAdapterService" />
+    <dubbo:reference id="suppGoodsDescJsonAdapterServiceRemote" interface="com.lvmama.vst.back.router.adapter.SuppGoodsDescJsonAdapterService" />
+    <dubbo:reference id="suppGoodsExpAdapterServiceeRemote" interface="com.lvmama.vst.back.router.adapter.SuppGoodsExpAdapterService" />
+    <dubbo:reference id="suppGoodsRefundAdapterServiceRemote" interface="com.lvmama.vst.back.router.adapter.SuppGoodsRefundAdapterService" />
+    
+    <dubbo:reference id="prodTrafficBusClientServiceRemote" interface="com.lvmama.vst.back.client.prod.service.ProdTrafficBusClientService" />
+    
+    <dubbo:reference id="prodTrafficFlightService" interface="com.lvmama.vst.back.prod.service.ProdTrafficFlightService" />
+	<dubbo:reference id="prodTrafficTrainService" interface="com.lvmama.vst.back.prod.service.ProdTrafficTrainService" />
+	<dubbo:reference id="suppGoodsFlightClientService" interface="com.lvmama.vst.flight.client.goods.service.SuppGoodsFlightClientService" />
+	<dubbo:reference id="suppGoodsBusClientService" interface="com.lvmama.vst.back.client.goods.service.SuppGoodsBusClientService" />
+	<dubbo:reference id="customizedProductClientService" interface="com.lvmama.vst.back.client.customized.service.CustomizedProductClientService" />
+	<dubbo:reference id="hotelcombBranchService" interface="com.lvmama.vst.back.prod.service.newHotelcomb.IHotelcombBranchService" />
+	
+<!-- new add6 -->
+
+	<dubbo:reference id="suppGroupStockServiceRemote" interface="com.lvmama.vst.back.goods.service.SuppGroupStockService" />
+	<dubbo:reference id="distributorGoodsClientServiceRemote" interface="com.lvmama.vst.back.client.dist.service.DistributorGoodsClientService" />
+	<dubbo:reference id="bizPostAeraClientServiceRemote" interface="com.lvmama.vst.back.client.biz.service.BizPostAeraClientService" />
+<!-- 定制游 -->	
+
+	<dubbo:reference id="customizedProdDestReServiceRemote" interface="com.lvmama.vst.back.customized.service.CustomizedProdDestReService" />
+	<dubbo:reference id="customizedProdDetailServicRemote" interface="com.lvmama.vst.back.customized.service.CustomizedProdDetailService" />
+	<dubbo:reference id="customizedProdLineInfoServiceRemote" interface="com.lvmama.vst.back.customized.service.CustomizedProdLineInfoService" />
+	<dubbo:reference id="customizedProdSubjectServiceRemote" interface="com.lvmama.vst.back.customized.service.CustomizedProdSubjectService" />
+	<dubbo:reference id="customizedProductServiceRemote" interface="com.lvmama.vst.back.customized.service.CustomizedProductService" />
+
+	
+	<!-- new -->
+	<dubbo:reference id="financeSuppGoodsDescInfoClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.FinanceSuppGoodsDescInfoClientService" />
+	<dubbo:reference id="financeInterestsBonusClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.FinanceInterestsBonusClientService" />
+	<dubbo:reference id="iPayDataDictionaryServiceRemote" interface="com.lvmama.pay.api.service.IPayDataDictionaryService" />
+	<dubbo:reference id="financeOtherInterestsBonusClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.FinanceOtherInterestsBonusClientService" />
+		
+	<dubbo:reference id="hotelProdBranchQueryVstApiServiceRemote" interface="com.lvmama.dest.api.vst.prod.service.IHotelProdBranchQueryVstApiService" />
+	<dubbo:reference id="scenicProdProductBranchService" interface="com.lvmama.scenic.api.back.prod.service.ScenicProdProductBranchService" />	
+	<dubbo:reference id="scenicProdProductService" interface="com.lvmama.scenic.api.back.prod.service.ScenicProdProductService" />
+	<dubbo:reference id="scenicSuppGoodsService"  interface="com.lvmama.scenic.api.prod.service.ScenicSuppGoodsService" />
+	<dubbo:reference id="scenicTicketGoodsService"  interface="com.lvmama.scenic.api.ticket.prod.service.ScenicTicketGoodsService"/>
+	
+	<dubbo:reference id="multiDestInfoServiceRemote" interface="com.lvmama.phppid.dest.service.MultiDestInfoService"/>
+	
+	<!-- 金融产品 -->
+	<dubbo:reference id="financeProdRefundRuleClientService" interface="com.lvmama.vst.back.client.prod.service.FinanceProdRefundRuleClientService" />
+	<dubbo:reference id="financialGoodsTimePriceApiService" interface="com.lvmama.price.api.strategy.service.FinancialGoodsTimePriceApiService" />
+	<dubbo:reference id="financeInterestsBonusService" interface="com.lvmama.vst.back.goods.service.FinanceInterestsBonusService"/>
+	<dubbo:reference id="financeOtherInterestsBonusService" interface="com.lvmama.vst.back.goods.service.FinanceOtherInterestsBonusService"/>
+	<dubbo:reference id="financeLableTableClientService" interface="com.lvmama.vst.back.client.goods.service.FinanceLableTableClientService"/>
+	<dubbo:reference id="financeLableClientService" interface="com.lvmama.vst.back.client.goods.service.FinanceLableClientService"/>
+	<dubbo:reference id="financeLableClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.FinanceLableClientService" />
+	<dubbo:reference id="financeLableTableClientServiceRemote" interface="com.lvmama.vst.back.client.goods.service.FinanceLableTableClientService" />
+	<dubbo:reference id="superMemberPriceSetService" interface="com.lvmama.vst.back.prod.service.SuperMemberPriceSetService"/>
+	<dubbo:reference id="superMemberSalePromotionService" interface="com.lvmama.vst.back.prod.service.SuperMemberSalePromotionService"/>
+	<dubbo:reference id="superMemberGoodsTimePriceApiService" interface="com.lvmama.price.api.strategy.service.SuperMemberGoodsTimePriceApiService"/>
+	<dubbo:reference id="crmPayMemberService" interface="com.lvmama.crm.outer.user.api.CrmPayMemberService"/>
+
+	<!--查询NS系统产品信息开始-->
+	<dubbo:reference id="sSTQueryProductInfoFacade" interface="com.tims.product.web.facade.VSTQueryProductInfoFacade"/>
+	<!--查询NS系统产品信息结束-->
+	
+	
+	<dubbo:reference id="prodProductDataServiceRemote" interface="com.lvmama.vst.back.prod.service.IProdProductDataService"/>
+	</beans>

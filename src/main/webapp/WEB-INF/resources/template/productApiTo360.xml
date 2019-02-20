@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creativeset>
+    <creative>
+        <bidwords>
+            <![CDATA[ bidword_1;bidword_2;bidword_3;... ]]>
+        </bidwords>
+        <data>
+            <guides>
+                <attribute>
+                    <label>
+                        <![CDATA[ 导航标签文字_0 ]]>
+                    </label>
+                    <links_text>
+                        <![CDATA[ 导航内容_1;导航内容2_;导航内容_3;... ]]>
+                    </links_text>
+                    <links_href>
+                        <![CDATA[ 导航url_1;导航url_2;...;... ]]>
+                    </links_href>
+                </attribute>
+                <attribute>
+                    <label>
+                        <![CDATA[ 导航标签文字_1 ]]>
+                    </label>
+                    <links_text>
+                        <![CDATA[ 导航内容_1;导航内容2_;导航内容_3;... ]]>
+                    </links_text>
+                    <links_href>
+                        <![CDATA[ 导航url_1;导航url_2;...;... ]]>
+                    </links_href>
+                </attribute>
+                <attribute>
+                    <label>
+                        <![CDATA[ 导航标签文字_2 ]]>
+                    </label>
+                    <links_text>
+                        <![CDATA[ 导航内容_1;导航内容2_;导航内容_3;... ]]>
+                    </links_text>
+                    <links_href>
+                        <![CDATA[ 导航url_1;导航url_2;...;... ]]>
+                    </links_href>
+                </attribute>
+            </guides>
+            <sp_direct>
+                <attribute>
+                    <product_name>
+                        <![CDATA[ 商品名称_0 ]]>
+                    </product_name>
+                    <product_desc>
+                        <![CDATA[ 商品描述_0 ]]>
+                    </product_desc>
+                    <product_price>
+                        <![CDATA[ 商品价格_0 ]]>
+                    </product_price>
+                    <product_image>
+                        <![CDATA[ 商品图片_0 ]]>
+                    </product_image>
+                    <product_url>
+                        <![CDATA[ 商品url_0 ]]>
+                    </product_url>
+                </attribute>
+                <attribute>
+                    <product_name>
+                        <![CDATA[ 商品名称_1 ]]>
+                    </product_name>
+                    <product_desc>
+                        <![CDATA[ 商品描述_1 ]]>
+                    </product_desc>
+                    <product_price>
+                        <![CDATA[ 商品价格_1 ]]>
+                    </product_price>
+                    <product_image>
+                        <![CDATA[ 商品图片_1 ]]>
+                    </product_image>
+                    <product_url>
+                        <![CDATA[ 商品url_1 ]]>
+                    </product_url>
+                </attribute>
+                <attribute>
+                    <product_name>
+                        <![CDATA[ 商品名称_2 ]]>
+                    </product_name>
+                    <product_desc>
+                        <![CDATA[ 商品描述_2 ]]>
+                    </product_desc>
+                    <product_price>
+                        <![CDATA[ 商品价格_2 ]]>
+                    </product_price>
+                    <product_image>
+                        <![CDATA[ 商品图片_2 ]]>
+                    </product_image>
+                    <product_url>
+                        <![CDATA[ 商品url_2 ]]>
+                    </product_url>
+                </attribute>
+            </sp_direct>
+        </data>
+    </creative>
+</creativeset>
